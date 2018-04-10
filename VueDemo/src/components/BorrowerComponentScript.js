@@ -1,24 +1,27 @@
 import 'whatwg-fetch'
+import BorrowerModel from '../models/BorrowerModel';
+import * as BorrowerService from '../services/BorrowerService';
 
 export default {
   name: 'Borrower',
-  data() {
+  data () {
     return {
-      msg: 'Welcome to Your Vue.js App',
-      value1: '',
-      value2: ''
+      loading: false,
+      borrower: new BorrowerModel()
     }
   },
+  created () {
+    this.getBorrowerFromApi();
+  },
   methods: {
-    loadValuesFromApi() {
-      fetch('/api/values')
-        .then((response) => {
-          return response.json();
-        })
-        .then((json) => {
-          this.value1 = json[0];
-          this.value2 = json[1];
-        });
+    getBorrowerFromApi() {
+      let self = this;
+      self.loading = true;
+      BorrowerService.getBorrowerWithId(1)
+        .then((borrowerObject) => {
+          self.loading = false;
+          self.borrower = borrowerObject;
+      });
     }
   }
 }

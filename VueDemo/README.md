@@ -25,3 +25,9 @@ npm test
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+## Notes
+- Johnson's prototype url: https://dvsee6.axshare.com/#g=1&p=--pipeline_page-loan_apps
+- Debouncing: https://alligator.io/vuejs/lodash-throttle-debounce/
+- Getting Data: https://router.vuejs.org/en/advanced/data-fetching.html
+- Validation: https://vuejs.org/v2/cookbook/form-validation.html
