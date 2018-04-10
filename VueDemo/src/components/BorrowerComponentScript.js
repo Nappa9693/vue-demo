@@ -1,7 +1,7 @@
 import 'whatwg-fetch'
 
 export default {
-  name: 'HelloWorld',
+  name: 'Borrower',
   data() {
     return {
       msg: 'Welcome to Your Vue.js App',
