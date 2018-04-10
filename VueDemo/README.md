@@ -31,3 +31,4 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 - Debouncing: https://alligator.io/vuejs/lodash-throttle-debounce/
 - Getting Data: https://router.vuejs.org/en/advanced/data-fetching.html
 - Validation: https://vuejs.org/v2/cookbook/form-validation.html
+- Event Handling: https://vuejs.org/v2/guide/events.html
