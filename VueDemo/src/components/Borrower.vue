@@ -24,26 +24,4 @@
 </template>
 
 <script src="./BorrowerComponentScript.js"></script>
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-  h1, h2 {
-    font-weight: normal;
-  }
-
-  label{
-    text-align: left;
-  }
-
-  .borrower-form{
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .borrower-form form{
-    display: flex;
-    flex-direction: column;
-    width: 400px;
-  }
-</style>
+<style lang="scss" src="./BorrowerStyle.scss" scoped></style>

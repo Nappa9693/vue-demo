@@ -32,3 +32,4 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 - Getting Data: https://router.vuejs.org/en/advanced/data-fetching.html
 - Validation: https://vuejs.org/v2/cookbook/form-validation.html
 - Event Handling: https://vuejs.org/v2/guide/events.html
+- Sass Setup: https://stackoverflow.com/questions/44019469/how-to-use-sass-scss-with-latest-vue-cli-starter-project
