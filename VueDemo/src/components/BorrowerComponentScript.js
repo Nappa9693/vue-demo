@@ -1,9 +1,9 @@
 import 'whatwg-fetch'
 import BorrowerModel from '../models/BorrowerModel';
-import * as BorrowerService from '../services/BorrowerService';
 
 export default {
   name: 'Borrower',
+  props: ['service'],
   data () {
     return {
       loading: false,
@@ -17,7 +17,7 @@ export default {
     getBorrowerFromApi() {
       let self = this;
       self.loading = true;
-      BorrowerService.getBorrowerWithId(1)
+      this.$props.service.getBorrowerWithId(1)
         .then((borrowerObject) => {
           self.loading = false;
           self.borrower = borrowerObject;
