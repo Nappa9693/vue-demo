@@ -30,7 +30,7 @@ export default {
       if (result === null) {
         this.submissionResult = 'Submission succeeded. You get a cookie!'
       } else {
-        this.submissionResult = 'Submission failed. Your entered the data wrong!'
+        this.submissionResult = 'Your not quite done yet...'
       }
     }, 500)
   }
