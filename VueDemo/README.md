@@ -27,9 +27,26 @@ npm test
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
 ## Notes
-- Johnson's prototype url: https://dvsee6.axshare.com/#g=1&p=--pipeline_page-loan_apps
-- Debouncing: https://alligator.io/vuejs/lodash-throttle-debounce/
-- Getting Data: https://router.vuejs.org/en/advanced/data-fetching.html
-- Validation: https://vuejs.org/v2/cookbook/form-validation.html
-- Event Handling: https://vuejs.org/v2/guide/events.html
-- Sass Setup: https://stackoverflow.com/questions/44019469/how-to-use-sass-scss-with-latest-vue-cli-starter-project
+To use SASS you need to install sass-loader and node-sass. Then in the template
+you set style tags lang attribute to "sass" and be sure to use the scoped
+attribute as well.
+
+You will need to modify the config/index.js -> build settings to ensure that the built
+files are placed in the wwwroot folder.
+
+Ajax functionality was implemented using whatwg-fetch package.
+
+Debouncing was implemented using lodash package.
+
+### Vue Pros
+- Setup is not too painful. The vue-cli handles a lot of stuff such as webpack setup, unit testing setup, etc.
+- Relatively simple compared to Angular (JS or latest). Very straightforward.
+- Non opinionated for the most part. Easier to focus on the task at hand rather than trying to make the framework happy.
+- Flexible. Not locked into any particular way of doing things for the most part.
+- Can be used with Babel, Typescript, or even no transpiler at all.
+
+### Vue Cons
+- Reliance on third party libraries for functionality not built into the framework.
+- No built in validation.
+- No built in debouncing
+- No built in ajax.
