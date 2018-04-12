@@ -34,7 +34,7 @@ namespace VueDemo.Controllers
         [HttpPost]
         public void Post([FromBody]Borrower borrower)
         {
-            
+            Console.WriteLine($"Id: {borrower?.Id}, Phone Number: {borrower?.HomePhone}, Email: {borrower?.Email}");
         }
         
         // PUT: api/Borrower/5

@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Borrower from '@/components/Borrower'
 import * as BorrowerService from '../services/BorrowerService'
+import * as BorrowerValidation from '../business/BorrowerValidation'
 
 Vue.use(Router)
 
@@ -11,7 +12,7 @@ export default new Router({
       path: '/',
       name: 'Borrower',
       component: Borrower,
-      props: { service: BorrowerService }
+      props: { service: BorrowerService, business: BorrowerValidation }
     }
   ]
 })
