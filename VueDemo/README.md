@@ -4,12 +4,11 @@
 
 ## Build Setup
 
+Be sure to create the wwwroot folder in the project directory (not solution directory) if it is missing and also do the following steps before attempting to run the project.
+
 ``` bash
 # install dependencies
 npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
 
 # build for production with minification
 npm run build
@@ -24,9 +23,19 @@ npm run unit
 npm test
 ```
 
+To run the project simply fire up Visual Studio and click the green run button. If you are using dotnet core with Visual Studio Code then you should be able to use
+the commands:
+```
+dotnet restore
+dotnet build
+dotnet run
+```
+
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
 ## Notes
+(These are just notes and are not steps that are needed for running this project)
+
 To use SASS you need to install sass-loader and node-sass. Then in the template
 you set style tags lang attribute to "sass" and be sure to use the scoped
 attribute as well.
