@@ -1,6 +1,6 @@
 import 'whatwg-fetch'
 import _ from 'lodash'
-import BorrowerModel from '../models/BorrowerModel';
+import BorrowerModel from '../../models/BorrowerModel';
 
 export default {
   name: 'Borrower',
@@ -26,7 +26,12 @@ export default {
     },
     // Note: Do not use arrow functions because they lack the "this." In other words you will not be able to use "this"
     updateBorrower: _.debounce(function () {
-      this.$props.service.updateBorrower(this.borrower, this.$props.business);
+      let result = this.$props.service.updateBorrower(this.borrower, this.$props.business);
+      if (result === null) {
+        this.submissionResult = 'Submission succeeded. You get a cookie!'
+      } else {
+        this.submissionResult = 'Submission failed. Your entered the data wrong!'
+      }
     }, 500)
   }
 }

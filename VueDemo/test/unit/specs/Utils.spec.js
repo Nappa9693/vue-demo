@@ -1,4 +1,4 @@
-import * as Utils from '../../../src/Utils';
+import * as Utils from '@/Utils';
 
 describe('Tests the isIntegerGreaterThanZero function with various values', () => {
   it('should return true when given an integer greater than zero', () => {

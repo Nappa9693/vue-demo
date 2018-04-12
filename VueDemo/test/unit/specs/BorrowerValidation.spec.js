@@ -1,5 +1,5 @@
-import * as BorrowerValidation from '../../../src/business/BorrowerValidation';
-import BorrowerModel from '../../../src/models/BorrowerModel';
+import * as BorrowerValidation from '@/business/BorrowerValidation';
+import BorrowerModel from '@/models/BorrowerModel';
 
 describe('Tests the isBorrowerValid method with valid borrower', () => {
   it('should return a successful result', () => {

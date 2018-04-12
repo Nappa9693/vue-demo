@@ -9,7 +9,7 @@ export function getBorrowerWithId (id) {
 
 export function updateBorrower (borrower, business) {
   let validationResult = business.isBorrowerValid(borrower)
-  console.log(validationResult)
+  
   if (validationResult.isSuccessful() === false) {
     return validationResult
   }
@@ -23,4 +23,6 @@ export function updateBorrower (borrower, business) {
     },
     credentials: 'same-origin'
   })
+
+  return null
 }

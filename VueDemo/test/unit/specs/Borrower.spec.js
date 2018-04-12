@@ -1,7 +1,7 @@
 import Vue from 'vue'
-import Borrower from '@/components/Borrower'
+import Borrower from '@/components/Borrower/Borrower'
 import * as MockBorrowerService from '../mocks/MockBorrowerService';
-import * as BorrowerValidation from '../../../src/business/BorrowerValidation';
+import * as BorrowerValidation from '@/business/BorrowerValidation';
 
 describe('Borrower.vue', () => {
   it('should render correct contents', () => {
