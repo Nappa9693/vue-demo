@@ -1,6 +1,8 @@
 # vue-demo
 
-> A Vue.js project
+This project was made in a brief period of time (mostly spare time) as a tech demo for Vue to showcase
+how a project would be done in Vue (file structuring, unit testing, debouncing, dependency injection, etc.).
+Please note that this is not a fully complete project and is more of a starting point.
 
 ## Build Setup
 
@@ -46,16 +48,3 @@ files are placed in the wwwroot folder.
 Ajax functionality was implemented using whatwg-fetch package.
 
 Debouncing was implemented using lodash package.
-
-### Vue Pros
-- Setup is not too painful. The vue-cli handles a lot of stuff such as webpack setup, unit testing setup, etc.
-- Relatively simple compared to Angular (JS or latest). Very straightforward.
-- Non opinionated for the most part. Easier to focus on the task at hand rather than trying to make the framework happy.
-- Flexible. Not locked into any particular way of doing things for the most part.
-- Can be used with Babel, Typescript, or even no transpiler at all.
-
-### Vue Cons
-- Reliance on third party libraries for functionality not built into the framework.
-- No built in validation.
-- No built in debouncing
-- No built in ajax.
