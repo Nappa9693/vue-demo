@@ -4,7 +4,6 @@ import BorrowerModel from '../../models/BorrowerModel';
 
 export default {
   name: 'Borrower',
-  props: ['service', 'business'],
   data () {
     return {
       loading: false,
@@ -18,7 +17,9 @@ export default {
     getBorrowerFromApi() {
       let self = this;
       self.loading = true;
-      this.$props.service.getBorrowerWithId(1)
+
+      let borrowerService = this.$customServiceProvider.getBorrowerService()
+      borrowerService.getBorrowerWithId(1)
         .then((borrowerObject) => {
           self.loading = false;
           self.borrower = borrowerObject;
@@ -26,7 +27,9 @@ export default {
     },
     // Note: Do not use arrow functions because they lack the "this." In other words you will not be able to use "this"
     updateBorrower: _.debounce(function () {
-      let result = this.$props.service.updateBorrower(this.borrower, this.$props.business);
+      let borrowerService = this.$customServiceProvider.getBorrowerService()
+      let result = borrowerService.updateBorrower(this.borrower, this.$props.business)
+
       if (result === null) {
         this.submissionResult = 'Submission succeeded. You get a cookie!'
       } else {

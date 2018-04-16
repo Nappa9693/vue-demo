@@ -1,4 +1,5 @@
 import 'whatwg-fetch'
+import * as Business from '@/business/BorrowerValidation'
 
 export function getBorrowerWithId (id) {
   return fetch(`/api/Borrower/${id}`)
@@ -7,8 +8,8 @@ export function getBorrowerWithId (id) {
     })
 }
 
-export function updateBorrower (borrower, business) {
-  let validationResult = business.isBorrowerValid(borrower)
+export function updateBorrower (borrower) {
+  let validationResult = Business.isBorrowerValid(borrower)
 
   if (validationResult.isSuccessful() === false) {
     return validationResult

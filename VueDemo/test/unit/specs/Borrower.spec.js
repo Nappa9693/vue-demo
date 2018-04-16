@@ -1,17 +1,12 @@
 import Vue from 'vue'
 import Borrower from '@/components/Borrower/Borrower'
-import * as MockBorrowerService from '../mocks/MockBorrowerService';
-import * as BorrowerValidation from '@/business/BorrowerValidation';
+import * as MockServiceProvider from '../mocks/MockServiceProvider'
 
 describe('Borrower.vue', () => {
   it('should render correct contents', () => {
+    Vue.prototype.$customServiceProvider = MockServiceProvider
     const Constructor = Vue.extend(Borrower)
-    const vm = new Constructor({
-      propsData: {
-        service: MockBorrowerService,
-        business: BorrowerValidation
-      }
-    }).$mount()
+    const vm = new Constructor().$mount()
     expect(vm.$el.querySelector('.borrower-form h1').textContent)
       .toEqual('Borrower Info')
   })
